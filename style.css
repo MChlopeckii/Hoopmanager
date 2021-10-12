@@ -1,4 +1,27 @@
 body{
     font-size: 36px;
     font-family: Lato;
+    background-color: cyan;
+}
+.file{
+    margin:5px;
+    background: #000;
+    color: white;
+    border: orange 2px solid;
+    border-radius: 10px;
+}
+#cards{
+    width: 60%;
+    height: 700px;
+    display: inline-block;
+}
+#field{
+    width: 35%;
+    height: 700px;
+    display: inline-block;
+}
+header{
+    padding: 10px;
+    text-align: center;
+    font-size: 48px;
 }
