@@ -9,13 +9,13 @@ class card {
     }
 }
 
-createCard()
-displayCards()
 function createCard() {
     const seba = new card("Sebastian", "Gozdzinsky", 50, 50, 50, 50);
-    console.log(seba)
+    displayCards(seba);
 }
-function displayCards() {
-
-
+function displayCards(card) {
+    let newCard = document.createElement("div");
+    newCard.id = card.name;
+    newCard.className = "card";
+    document.getElementById("cards").appendChild(newCard);
 }
