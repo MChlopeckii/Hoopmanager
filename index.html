@@ -12,12 +12,21 @@
 
 <body>
     <header class="file">Hoopmanager</header>
-    <div id="cards" class="file">
-        <button onclick="createCard()">Stwórz Sebastiana</button>
+    <div id="cardsWindow" class="file">
+        <header onclick="openCardsWindow()">Karty: </header>
+        <div id="cards" class="closedField">
+            <button onclick="createCard()">Stwórz Sebastiana</button>
+        </div>
+    </div>
+    <div id="lootWindow" class="file">
+        <header onclick="openLootWindow()">Loot chesty:</header>
+        <div id="loot" class="closedField">
+
+        </div>
     </div>
     <div id="field" class="file"></div>
-    
-
+    <script src="dazaBanych.js"></script>
+    <script src="openWindow.js"></script>
     <script src="cards.js"></script>
 </body>
 

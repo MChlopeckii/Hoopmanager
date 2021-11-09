@@ -9,10 +9,11 @@ body{
     color: white;
     border: orange 2px solid;
     border-radius: 10px;
+    height: 70px;
+    transition: all 0.5s ease 0.5s;
 }
 #cardsWindow{
     width: 60%;
-    height: 70px;
     display: block;
     float: left;
 }
@@ -34,10 +35,24 @@ header{
     color: black;
     float: left;
 }
-#cards{
-    overflow: scroll;
-    height: 0px;
-}
-#cardsWindow header:hover{
+header:hover{
     cursor: pointer;
+}
+.openWindow{
+    height: 700px;
+    transition: all 0.5s;
+}
+.openField{
+    opacity: 1;
+    transition: opacity 0.5s ease 0.5s;
+}
+.closedField{
+    opacity:0;
+    overflow: scroll;
+    transition: opacity 0.5s;
+}
+#lootWindow{
+    width: 60%;
+    display: block;
+    float: left;
 }
