@@ -37,6 +37,7 @@ header{
     margin: 10px;
     color: black;
     float: left;
+    font-size: 36px;
 }
 header:hover{
     cursor: pointer;
@@ -60,4 +61,22 @@ header:hover{
     background: yellow;
     color: black;
     margin: auto;
+}
+#test{
+    width: 200px;
+    height:200px;
+    background: red;
+    position: absolute;
+    z-index: 2;
+    left: 500px;
+}
+#openingAnimation{
+    color: orange;
+    font-size: 128px;
+    font-family: Lato;
+    position: fixed;
+    z-index:2;
+    right: 47%;
+    top:47%;
+
 }

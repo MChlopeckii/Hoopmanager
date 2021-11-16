@@ -11,32 +11,34 @@
 </head>
 
 <body>
-    <header class="file">Hoopmanager</header>
-    <div id="cardsWindow" class="file">
-        <header onclick="openCardsWindow()">Karty: </header>
-        <div id="cards" class="closedField" style="height: 0px;">
-            <button onclick=" createCard()">Stwórz Kartę</button>
+    <div id="everything">
+        <header class="file">Hoopmanager</header>
+        <div id="cardsWindow" class="file">
+            <header onclick="openCardsWindow()">Karty: </header>
+            <div id="cards" class="closedField" style="height: 0px;">
+                <button onclick=" createCard()">Stwórz Kartę</button>
+            </div>
         </div>
-    </div>
-    <div id="lootWindow" class="file">
-        <header onclick="openLootWindow()">Skrzynki:</header>
-        <div id="loot" class="closedField" style="height: 0px;">
-            <div id="SZTIchest" onclick="openChest('SZTI')">Skrzynka SZTI</div>
+        <div id="lootWindow" class="file">
+            <header onclick="openLootWindow()">Skrzynki:</header>
+            <div id="loot" class="closedField" style="height: 0px;">
+                <div id="SZTIchest" onclick="openChest('SZTI')">Skrzynka SZTI</div>
+            </div>
         </div>
-    </div>
-    <div id="playsWindow" class="file">
-        <header onclick="openPlaysWindow()">Zagrywki:</header>
-        <div id="plays" class="closedField" style="height: 0px;">
+        <div id="playsWindow" class="file">
+            <header onclick="openPlaysWindow()">Zagrywki:</header>
+            <div id="plays" class="closedField" style="height: 0px;">
 
+            </div>
         </div>
-    </div>
-    <div id="simWindow" class="file">
-        <header onclick="openSimWindow()">Symulacja:</header>
-        <div id="sim" class="closedField" style="height: 0px;">
+        <div id="simWindow" class="file">
+            <header onclick="openSimWindow()">Symulacja:</header>
+            <div id="sim" class="closedField" style="height: 0px;">
 
+            </div>
         </div>
+        <div id="field" class="file"></div>
     </div>
-    <div id="field" class="file"></div>
     <script src="dazaBanych.js"></script>
     <script src="openWindow.js"></script>
     <script src="cards.js"></script>

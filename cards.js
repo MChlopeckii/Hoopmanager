@@ -26,4 +26,5 @@ function displayCards(card) {
     document.getElementById("cards").appendChild(newCard);
     document.getElementById(card.id).innerHTML = card.name + " " + card.last_name + "<br>" + "prędkość:" +
         card.speed + "<br>" + "celność:" + card.accuracy + "<br>" + "wysokość:" + card.height;
+    document.getElementById("openingAnimation").appendChild(newCard);
 }
