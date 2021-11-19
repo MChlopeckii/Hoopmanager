@@ -20,11 +20,24 @@ function createCard() {
     );
 }
 function displayCards(card) {
-    let newCard = document.createElement("div");
+    const newCard = document.createElement("div");
     newCard.id = card.id;
     newCard.className = "card";
-    document.getElementById("cards").appendChild(newCard);
-    document.getElementById(card.id).innerHTML = card.name + " " + card.last_name + "<br>" + "prędkość:" +
-        card.speed + "<br>" + "celność:" + card.accuracy + "<br>" + "wysokość:" + card.height;
-    document.getElementById("openingAnimation").appendChild(newCard);
+    newCard.src = "orangeCard.png";
+
+    let documentFragment = document.createDocumentFragment();   // appends the .card div
+    documentFragment.appendChild(newCard);
+
+    const cardimg = document.createElement("img");              //appends the card img
+    cardimg.src = "orangeCard.png";
+    newCard.appendChild(cardimg);
+
+    const cardName = document.createElement("p");               //appends player's name
+    cardName.innerHTML = card.name+" "+card.last_name;
+    cardName.className = "cardName";
+    newCard.appendChild(cardName);
+
+    document.getElementById("cards").appendChild(documentFragment);
+    const animatedCard = document.getElementById(card.id).cloneNode(true);
+    document.getElementById("openingAnimation").appendChild(animatedCard);
 }

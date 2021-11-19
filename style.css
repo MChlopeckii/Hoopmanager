@@ -31,13 +31,22 @@ header{
     font-size: 48px;
 }
 .card{
-    background: yellow;
-    width: 300px;
-    height:400px;
     margin: 10px;
     color: black;
     float: left;
-    font-size: 36px;
+    display: grid;
+}
+.card > img{
+    position: absolute;
+    z-index: 3;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.card > .cardName{
+    font-size: 24px;
+    z-index: 4;
+    grid-column-start: 40px;
+    grid-row-start: 10px;
 }
 header:hover{
     cursor: pointer;
