@@ -34,10 +34,14 @@ header{
     margin: 10px;
     color: black;
     float: left;
-    display: grid;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+    width:302px;
+    height:401px;
+    font-size: 36px;
 }
 .card > img{
-    position: absolute;
     z-index: 3;
     grid-column-start: 1;
     grid-row-start: 1;
@@ -45,8 +49,43 @@ header{
 .card > .cardName{
     font-size: 24px;
     z-index: 4;
-    grid-column-start: 40px;
-    grid-row-start: 10px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.card > .cardLeft{
+    font-size: 20px;
+    z-index: 4;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    text-align: left;
+}
+.card > .cardRight{
+    font-size: 20px;
+    z-index: 4;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    text-align: right;
+}
+.card > .cardOverall{
+    font-size: 36px;
+    z-index: 4;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    text-align: center;
+}
+.card > .cardImgContainer{
+    z-index: 4;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.card > .cardImgContainer > .cardImg {
+    height: 150px;
+    width: 150px;
+    display: block;
+    border-radius: 100%;
 }
 header:hover{
     cursor: pointer;
@@ -64,13 +103,6 @@ header:hover{
     overflow: scroll;
     transition: opacity 0.5s;
 }
-#SZTIchest{
-    height: 200px;
-    width: 200px;
-    background: yellow;
-    color: black;
-    margin: auto;
-}
 #test{
     width: 200px;
     height:200px;
@@ -84,8 +116,12 @@ header:hover{
     font-size: 128px;
     font-family: Lato;
     position: fixed;
-    z-index:2;
+    z-index:5;
     right: 47%;
     top:47%;
 
+}
+#loot{
+    justify-content: center;
+    display: flex;
 }
