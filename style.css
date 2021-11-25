@@ -40,6 +40,7 @@ header{
     width:302px;
     height:401px;
     font-size: 36px;
+    transition: opacity 0.3s;
 }
 .card > img{
     z-index: 3;
@@ -86,6 +87,19 @@ header{
     width: 150px;
     display: block;
     border-radius: 100%;
+}
+.card > .cardMenu{
+    
+    margin-left: 8px;
+    margin-top: 150px;
+    height: 400px;
+    width: 280px;
+    background-color: #ffa251;
+    z-index: 2;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    border-radius: 20px;
+    border: white 3px dashed;
 }
 header:hover{
     cursor: pointer;

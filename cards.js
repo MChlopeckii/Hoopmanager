@@ -24,7 +24,6 @@ function displayCards(card) {
     const newCard = document.createElement("div");
     newCard.id = card.id;
     newCard.className = "card";
-    newCard.src = "orangeCard.png";
 
     let documentFragment = document.createDocumentFragment();   // appends the .card div
     documentFragment.appendChild(newCard);
@@ -54,7 +53,7 @@ function displayCards(card) {
     cardOverall.className = "cardOverall";
     newCard.appendChild(cardOverall);
 
-    const cardImgContainer = document.createElement("div");
+    const cardImgContainer = document.createElement("div");     //appends card img
     const cardImg = document.createElement("img");
     cardImgContainer.className = "cardImgContainer"
     cardImg.className = "cardImg";
@@ -63,7 +62,14 @@ function displayCards(card) {
     cardImgContainer.appendChild(cardImg);
     cardImgContainer.innerHTML += "<br><br><br><br><br><br><br><br><br>";
 
+    const cardMenu = document.createElement("div");
+    cardMenu.className = "cardMenu";
+    newCard.appendChild(cardMenu);
+
     document.getElementById("cards").appendChild(documentFragment);
+    document.getElementById(card.id).addEventListener("mouseover", () => {cardHover(card.id)});
+    document.getElementById(card.id).addEventListener("mouseout", cardLeaveHover);
+
     const animatedCard = document.getElementById(card.id).cloneNode(true);
     animatedCard.id += "clone";
     document.getElementById("openingAnimation").appendChild(animatedCard);
