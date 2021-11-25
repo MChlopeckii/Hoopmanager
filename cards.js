@@ -33,42 +33,50 @@ function displayCards(card) {
     newCard.appendChild(cardimg);
 
     const cardName = document.createElement("p");               //appends player's name
-    cardName.innerHTML = card.name+" "+card.last_name+ "<br><br><br>";
+    cardName.innerHTML = card.name+" "+card.last_name;
     cardName.className = "cardName";
     newCard.appendChild(cardName);
 
     const cardLeft = document.createElement("p");
-    cardLeft.innerHTML = "<br><br><br><br> &nbsp&nbspSzybkość: "+card.speed+"<br> &nbsp&nbspCelność: "+
+    cardLeft.innerHTML = "&nbsp&nbspSzybkość: "+card.speed+"<br> &nbsp&nbspCelność: "+
     card.accuracy+ "<br> &nbsp&nbspWysokość: "+card.height;
     cardLeft.className = "cardLeft";
     newCard.appendChild(cardLeft);
 
     const cardRight = document.createElement("p");
-    cardRight.innerHTML = "<br><br><br><br>Pozycja:&nbsp&nbsp&nbsp&nbsp<br>Dowolna&nbsp&nbsp&nbsp&nbsp";
+    cardRight.innerHTML = "Pozycja:&nbsp&nbsp&nbsp&nbsp<br>Dowolna&nbsp&nbsp&nbsp&nbsp";
     cardRight.className = "cardRight";
     newCard.appendChild(cardRight);
 
     const cardOverall = document.createElement("p");
-    cardOverall.innerHTML = "<br><br><br><br><br><br><br>"+card.overall;
+    cardOverall.innerHTML = +card.overall;
     cardOverall.className = "cardOverall";
     newCard.appendChild(cardOverall);
 
-    const cardImgContainer = document.createElement("div");     //appends card img
-    const cardImg = document.createElement("img");
-    cardImgContainer.className = "cardImgContainer"
+    const cardImg = document.createElement("img");      //appends card img
     cardImg.className = "cardImg";
     cardImg.src = card.img;
-    newCard.appendChild(cardImgContainer);
-    cardImgContainer.appendChild(cardImg);
-    cardImgContainer.innerHTML += "<br><br><br><br><br><br><br><br><br>";
+    newCard.appendChild(cardImg);
 
-    const cardMenu = document.createElement("div");
+    const cardMenu = document.createElement("div");     //appends card remove and add buttons
     cardMenu.className = "cardMenu";
     newCard.appendChild(cardMenu);
+    const buttonAdd = document.createElement("button")
+    const buttonRemove = document.createElement("button")
+    buttonAdd.className = "buttonAdd";
+    buttonAdd.id = card.id+"AddButton";
+    buttonAdd.innerHTML = "Dodaj";
+    buttonRemove.className = "buttonRemove";
+    buttonRemove.id = card.id+"RemoveButton";
+    buttonRemove.innerHTML = "Usuń";
 
     document.getElementById("cards").appendChild(documentFragment);
+    document.getElementById(card.id).lastChild.appendChild(buttonAdd);
+    document.getElementById(card.id).lastChild.appendChild(buttonRemove);
+    document.getElementById(card.id+"AddButton").addEventListener("click", () => {cardAdd(card.id)})
+    document.getElementById(card.id+"RemoveButton").addEventListener("click", () => {cardRemove(card.id)})
     document.getElementById(card.id).addEventListener("mouseover", () => {cardHover(card.id)});
-    document.getElementById(card.id).addEventListener("mouseout", cardLeaveHover);
+    document.getElementById(card.id).addEventListener("mouseout", () => {cardLeaveHover(card.id)});
 
     const animatedCard = document.getElementById(card.id).cloneNode(true);
     animatedCard.id += "clone";

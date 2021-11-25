@@ -46,12 +46,15 @@ header{
     z-index: 3;
     grid-column-start: 1;
     grid-row-start: 1;
+    display: block;
+    margin-bottom:400px;
 }
 .card > .cardName{
     font-size: 24px;
     z-index: 4;
     grid-column-start: 1;
     grid-row-start: 1;
+    margin-bottom:480px;
 }
 .card > .cardLeft{
     font-size: 20px;
@@ -59,6 +62,7 @@ header{
     grid-column-start: 1;
     grid-row-start: 1;
     text-align: left;
+    margin-bottom:310px;
 }
 .card > .cardRight{
     font-size: 20px;
@@ -66,6 +70,7 @@ header{
     grid-column-start: 1;
     grid-row-start: 1;
     text-align: right;
+    margin-bottom:310px;
 }
 .card > .cardOverall{
     font-size: 36px;
@@ -73,26 +78,22 @@ header{
     grid-column-start: 1;
     grid-row-start: 1;
     text-align: center;
+    margin-bottom:130px;
 }
-.card > .cardImgContainer{
-    z-index: 4;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-.card > .cardImgContainer > .cardImg {
+.card > .cardImg {
     height: 150px;
     width: 150px;
     display: block;
     border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 640px;
 }
 .card > .cardMenu{
-    
+    display: none;
     margin-left: 8px;
     margin-top: 150px;
-    height: 400px;
+    height: 180px;
     width: 280px;
     background-color: #ffa251;
     z-index: 2;
@@ -100,6 +101,22 @@ header{
     grid-row-start: 1;
     border-radius: 20px;
     border: white 3px dashed;
+    margin-bottom: 150px;
+}
+.card > .cardMenu > .buttonRemove, .card > .cardMenu > .buttonAdd{
+    z-index:6;
+    margin-top: 100px;
+    font-size: 36px;
+    padding: 10px;
+}
+.card > .cardMenu > .buttonAdd{
+    margin-right: 25px;
+    background-color: rgb(138, 205, 50);
+    color: black;
+}
+.card > .cardMenu > .buttonRemove{
+    background-color: rgb(255, 81, 0);
+    color: white;
 }
 header:hover{
     cursor: pointer;
