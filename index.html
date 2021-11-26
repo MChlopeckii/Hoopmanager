@@ -36,14 +36,21 @@
 
             </div>
         </div>
-        <div id="field" class="file" style="justify-content: center; display: flex;"> 
-            <img src="backetball_field.jpg" alt="pole koszykówki" style="height: 700px; width: 451px;"></div>
+        <div id="field" class="file"> 
+            <img src="backetball_field.jpg" alt="pole koszykówki" style="height: 700px; width: 451px; 
+            grid-column-start: 1;
+            grid-row-start: 1;">
+            <div id="popUpCardMessage"> Wybierz slot, do którego chcesz przydzielić zawodnika</div>
+            <div id="leftWing" class="slot" onclick="chooseSlot('leftWing')" onmouseover="displaySlotInfo('leftWing')"></div>
+            <div id="centerPosition" class="slot" onclick="chooseSlot('centerPosition')" onmouseover="displaySlotInfo('centerPosition')"></div>
+            <div id="rightWing" class="slot" onclick="chooseSlot('rightWing')" onmouseover="displaySlotInfo('rightWing')"></div>
+        </div>
     </div>
     <script src="dazaBanych.js"></script>
     <script src="openWindow.js"></script>
     <script src="cards.js"></script>
     <script src="lootChests.js"></script>
-    <script src="cardHover.js"></script>
+    <script src="cardOptions.js"></script>
 </body>
 
 </html>
