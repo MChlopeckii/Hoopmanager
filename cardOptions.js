@@ -39,18 +39,26 @@ function chooseSlot(slotId)
         slot.removeChild(slot.firstChild);
         switch(slotId)
         {
-            case "leftWing": document.getElementById(leftSlot).style.display = "inline-grid"; break;
-            case "centerPosition": document.getElementById(middleSlot).style.display = "inline-grid"; break;
-            case "rightWing": document.getElementById(rightSlot).style.display = "inline-grid"; break;
+            case "leftWing": document.getElementById(leftSlot).style.display = "inline-grid"; 
+            document.getElementById("leftPopUp").style.opacity = 0; break;
+            case "centerPosition": document.getElementById(middleSlot).style.display = "inline-grid";
+            document.getElementById("middlePopUp").style.opacity = 0; break;
+            case "rightWing": document.getElementById(rightSlot).style.display = "inline-grid";
+            document.getElementById("rightPopUp").style.opacity = 0; break;
         }
     }
     if(selectedCard !== -1 && slot.firstChild == null)  //add player to slot
     {
+        let cardSlot = null;
+        let activeSlot = null;
         switch(slotId)
         {
-            case "leftWing": leftSlot = selectedCard; break;
-            case "centerPosition": middleSlot = selectedCard; break;
-            case "rightWing": rightSlot = selectedCard; break;
+            case "leftWing": activeSlot = document.getElementById("leftPopUp");
+            cardSlot = leftSlot = selectedCard; break;
+            case "centerPosition": activeSlot = document.getElementById("middlePopUp");
+            cardSlot = middleSlot = selectedCard; break;
+            case "rightWing": activeSlot = document.getElementById("rightPopUp");
+            cardSlot = rightSlot = selectedCard; break;
         }
         const img = document.createElement("img");
         img.src = cards[selectedCard].img;
@@ -58,6 +66,9 @@ function chooseSlot(slotId)
         document.getElementById(selectedCard).style.display = "none";
         selectedCard = -1;
         document.getElementById("popUpCardMessage").style.display = "none";
+        
+        activeSlot.innerHTML = cards[cardSlot].name+" "+cards[cardSlot].last_name+"<br>"+cards[cardSlot].overall+"<br>"+"Kliknij aby usunąć";
+        activeSlot.style.background = (cards[cardSlot].rareCard)? "#77CCBE" : "#ffa251";
     }
 }
 function displaySlotInfo(slotId)
@@ -65,6 +76,27 @@ function displaySlotInfo(slotId)
     const slot = document.getElementById(slotId);
     if(slot.firstChild !== null)
     {
-        //TODO: Okienko z tutorialem
+        switch(slotId)
+        {
+            case "leftWing": document.getElementById("leftPopUp").style.opacity = 1; break;
+            case "centerPosition": document.getElementById("middlePopUp").style.opacity = 1; break;
+            case "rightWing": document.getElementById("rightPopUp").style.opacity = 1; break;
+        }
+
+    }
+}
+function hideSlotInfo(slotId)
+{
+    const slot = document.getElementById(slotId);
+    if(slot.firstChild !== null)
+    {
+        let activeSlot = null;
+        switch(slotId)
+        {
+            case "leftWing": activeSlot = document.getElementById("leftPopUp"); break;
+            case "centerPosition": activeSlot = document.getElementById("middlePopUp"); break;
+            case "rightWing": activeSlot = document.getElementById("rightPopUp"); break;
+        }
+        activeSlot.style.opacity = 0;
     }
 }

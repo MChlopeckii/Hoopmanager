@@ -41,9 +41,12 @@
             grid-column-start: 1;
             grid-row-start: 1;">
             <div id="popUpCardMessage"> Wybierz slot, do którego chcesz przydzielić zawodnika</div>
-            <div id="leftWing" class="slot" onclick="chooseSlot('leftWing')" onmouseover="displaySlotInfo('leftWing')"></div>
-            <div id="centerPosition" class="slot" onclick="chooseSlot('centerPosition')" onmouseover="displaySlotInfo('centerPosition')"></div>
-            <div id="rightWing" class="slot" onclick="chooseSlot('rightWing')" onmouseover="displaySlotInfo('rightWing')"></div>
+            <div id="leftWing" class="slot" onclick="chooseSlot('leftWing')" onmouseover="displaySlotInfo('leftWing')" onmouseout="hideSlotInfo('leftWing')"></div>
+            <div id="centerPosition" class="slot" onclick="chooseSlot('centerPosition')" onmouseover="displaySlotInfo('centerPosition')" onmouseout="hideSlotInfo('centerPosition')"></div>
+            <div id="rightWing" class="slot" onclick="chooseSlot('rightWing')" onmouseover="displaySlotInfo('rightWing')" onmouseout="hideSlotInfo('rightWing')"></div>
+            <div id="leftPopUp" class="popUp"></div>
+            <div id="middlePopUp" class="popUp"></div>
+            <div id="rightPopUp" class="popUp"></div>
         </div>
     </div>
     <script src="dazaBanych.js"></script>

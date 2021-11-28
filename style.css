@@ -1,13 +1,13 @@
 body{
     font-size: 36px;
     font-family: Lato;
-    background-color: cyan;
+    background-color: #77CCBE;
 }
 .file{
     margin:5px;
     background: #000;
     color: white;
-    border: orange 2px solid;
+    border: #FFA251 2px solid;
     border-radius: 10px;
     height: 70px;
     transition: all 0.5s ease 0.5s;
@@ -199,9 +199,35 @@ header:hover{
     width: 400px;
     grid-column-start: 1;
     grid-row-start: 1;
-    z-index: 2px;
+    z-index: 2;
     text-align: center;
     background-color: white;
     color: black;
     padding-top: 10px;
+}
+.popUp{
+    opacity: 0;
+    border-radius: 20px;
+    height:100px;
+    font-size: 18px;
+    width: 170px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 2;
+    text-align: center;
+    color: black;
+    transition: opacity 0.3s;
+    border: 2px black solid;
+}
+#leftPopUp{
+    margin-top: 290px;
+}
+#middlePopUp{
+    margin-top: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#rightPopUp{
+    margin-top: 290px;
+    margin-left: auto;
 }

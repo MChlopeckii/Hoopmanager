@@ -1,5 +1,5 @@
 class card {
-    constructor(name, last_name, speed, accuracy, height, overall, id, img) {
+    constructor(name, last_name, speed, accuracy, height, overall, id, img, rareCard) {
         this.id = id;
         this.name = name;
         this.last_name = last_name;
@@ -8,6 +8,7 @@ class card {
         this.height = height;
         this.overall = overall;
         this.img = img;
+        this.rareCard = rareCard;
     }
 }
 
@@ -29,7 +30,7 @@ function displayCards(card) {
     documentFragment.appendChild(newCard);
 
     const cardimg = document.createElement("img");              //appends the card img
-    cardimg.src = "orangeCard.png";
+    cardimg.src = (card.rareCard == true)? "blueCard.png" : "orangeCard.png";
     newCard.appendChild(cardimg);
 
     const cardName = document.createElement("p");               //appends player's name
