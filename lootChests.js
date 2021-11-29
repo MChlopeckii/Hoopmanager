@@ -3,18 +3,18 @@ function openChest(chestName) {
     setTimeout(() => {
         document.getElementById("everything").style.filter = "";
         document.body.removeChild(document.getElementById("openingAnimation"))
-    }, 500)
+    }, 5000)
     const openingAnimation = document.createElement("div");
     openingAnimation.id = "openingAnimation";
     openingAnimation.innerHTML = "3"
     document.body.appendChild(openingAnimation);
     const animation = document.getElementById("openingAnimation")
-    setTimeout(() => { animation.innerHTML = "2" }, 100);
-    setTimeout(() => { animation.innerHTML = "1" }, 200);
+    setTimeout(() => { animation.innerHTML = "2" }, 1000);
+    setTimeout(() => { animation.innerHTML = "1" }, 2000);
     setTimeout(() => {
         animation.innerHTML = "";
         createCard();
         animation.style.top = "35%";
         animation.style.right = "40%";
-    }, 300);
+    }, 3000);
 }

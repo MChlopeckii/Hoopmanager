@@ -13,13 +13,10 @@ class card {
 }
 
 function createCard() {
-    displayCards(
-        getCardById(
-            Math.floor(
-                Math.random() * 10
-            )
-        )
-    );
+    let rng = Math.floor(Math.random() * 10);
+    let newCard = getCardById(rng);
+    displayCards(newCard);
+    saveProgress(newCard);
 }
 function displayCards(card) {
     const newCard = document.createElement("div");
@@ -81,5 +78,5 @@ function displayCards(card) {
 
     const animatedCard = document.getElementById(card.id).cloneNode(true);
     animatedCard.id += "clone";
-    document.getElementById("openingAnimation").appendChild(animatedCard);
+    if(document.getElementById("openingAnimation")) document.getElementById("openingAnimation").appendChild(animatedCard);
 }

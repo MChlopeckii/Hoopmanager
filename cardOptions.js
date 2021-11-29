@@ -30,6 +30,7 @@ function cardRemove(id)
     {
         if (document.getElementById(i)) document.getElementById(i).style.opacity = 1;
     }
+    localStorage.setItem("card"+id, "deleted");
 }
 function chooseSlot(slotId)
 {
