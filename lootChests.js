@@ -13,7 +13,7 @@ function openChest(chestName) {
     setTimeout(() => { animation.innerHTML = "1" }, 2000);
     setTimeout(() => {
         animation.innerHTML = "";
-        createCard();
+        createCard(chestName);
         animation.style.top = "35%";
         animation.style.right = "40%";
     }, 3000);

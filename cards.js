@@ -12,9 +12,10 @@ class card {
     }
 }
 
-function createCard() {
+function createCard(chestName) {
     let rng = Math.floor(Math.random() * 10);
-    let newCard = getCardById(rng);
+    index++;
+    let newCard = (chestName == "SZTI")? getCardByIdFromSzti(rng) : getCardByIdFromDavid(rng);
     displayCards(newCard);
     saveProgress(newCard);
 }

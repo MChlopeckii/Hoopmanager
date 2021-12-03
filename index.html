@@ -22,6 +22,7 @@
             <header onclick="openLootWindow()">Skrzynki:</header>
             <div id="loot" class="closedField" style="height: 0px;">
                 <img src="sztichest.jpg" style="width: 232px; height: 205px;" onclick="openChest('SZTI')"></img>
+                <div style="width:232px; height: 205px; background: white; color: black;" onclick="openChest('david')">David Chest</div>
             </div>
         </div>
         <div id="playsWindow" class="file">
@@ -52,6 +53,9 @@
             <div id="middlePopUp" class="popUp"></div>
             <div id="rightPopUp" class="popUp"></div>
         </div>
+        <button class="file" onclick="clearLocal()">
+            <header>Usun Pamiec Lokalna</header>
+        </button>
     </div>
     <script src="dazaBanych.js"></script>
     <script src="openWindow.js"></script>

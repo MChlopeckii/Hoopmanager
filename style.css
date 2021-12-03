@@ -129,14 +129,6 @@ header:hover{
     overflow: scroll;
     transition: opacity 0.5s;
 }
-#test{
-    width: 200px;
-    height:200px;
-    background: red;
-    position: absolute;
-    z-index: 2;
-    left: 500px;
-}
 #openingAnimation{
     color: orange;
     font-size: 128px;
@@ -148,7 +140,7 @@ header:hover{
 
 }
 #loot{
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
 }
 .slot{
